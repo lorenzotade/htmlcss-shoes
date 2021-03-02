@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* GLOBALE */
 html {
   scroll-behavior: smooth;
 }
@@ -12,16 +12,56 @@ body {
   font-family: 'Rubik Mono One', sans-serif;
 }
 
+/* NAV */
+nav {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: right;
+}
+
+nav li {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  height: 50px;
+  width: 50px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  margin: 40px 10px;
+}
+
+nav li a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #000000 ;
+}
+
+nav li a,
+.box .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* LAYOVER NAV */
+nav li:hover {
+  box-shadow: 2px 3px 6px #000000;
+}
+
+nav li:active {
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* MAIN */
 main .box {
   position: relative;
   height: 100vh;
 }
 
 .box .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 50%;
 }
 
@@ -30,9 +70,8 @@ main .box {
 }
 
 .box .text {
-  margin: auto;
   text-align: center;
-  font-size: 30px;
+  font-size: 2em;
   font-weight: 900;
   text-transform: uppercase;
   word-spacing: 20px;
